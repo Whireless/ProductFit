@@ -1,0 +1,22 @@
+.main-nav {
+  padding-top: 44px;
+}
+
+.main-nav__logo {
+  display: block;
+  width: 318px;
+  height: 77px;
+  background: url("../img/logo.svg") no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+}
+
+.main-nav__link-block {
+  display: none;
+}

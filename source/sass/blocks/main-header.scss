@@ -1,0 +1,125 @@
+.main-header {
+  position: relative;
+  background: url("../img/mobile/bg-header.svg") no-repeat;
+  background-position: 0 315px;
+  background-size: contain;
+}
+
+.main-header__intro-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 63px;
+  padding-bottom: 170px;
+}
+
+.main-header__title {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $green;
+  margin: 0;
+}
+
+.main-header__description {
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+
+.main-header__new-project {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 232px;
+  height: 70px;
+  background-color: $red;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(30, 149, 155, 0.5);
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+}
+
+.main-header__partners {
+  position: absolute;
+  top: 635px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 340px;
+  height: 60px;
+  background-color: $green;
+  padding: 15px 20px;
+  opacity: 0.9;
+}
+
+.main-header__partners-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 77%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all ease 0.5s;
+}
+
+.main-header__partners-item {
+  &:first-of-type {
+    width: 260px;
+    height: 54px;
+    background: url("../img/partners/wooter.svg") no-repeat;
+  }
+
+  &:nth-of-type(2) {
+    width: 173px;
+    height: 53px;
+    background: url("../img/partners/smartbar.svg") no-repeat;
+  }
+
+  &:nth-of-type(3) {
+    width: 160px;
+    height: 54px;
+    background: url("../img/partners/cabify.svg") no-repeat;
+  }
+
+  &:nth-of-type(4) {
+    width: 139px;
+    height: 54px;
+    background: url("../img/partners/kari.svg") no-repeat;
+  }
+
+  &:last-of-type {
+    width: 197px;
+    height: 13px;
+    background: url("../img/partners/uralairlines.svg") no-repeat;
+  }
+}
+
+.main-header__button {
+  width: 17px;
+  height: 22px;
+  background: transparent url("../img/mobile/arrow.svg") no-repeat;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &--previus {
+    transform: rotate(180deg);
+  }
+}

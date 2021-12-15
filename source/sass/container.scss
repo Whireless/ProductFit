@@ -1,0 +1,9 @@
+.container {
+  width: 330px;
+  padding: 0 25px;
+  margin: 0 auto;
+
+  @media (min-width: $tabletW) {
+    padding: 0 60px;
+  }
+}

@@ -20,3 +20,43 @@
 .main-nav__link-block {
   display: none;
 }
+
+@media (min-width: $tabletW) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__logo {
+    width: 256px;
+    height: 62px;
+  }
+
+  .main-nav__link-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+  }
+
+  .main-nav__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: $green;
+    display: inline-block;
+
+    &--telegram {
+      width: 35px;
+      height: 25px;
+      background: url("../img/telegram.svg") no-repeat;
+      background-size: cover;
+    }
+
+    &--mail {
+      width: 35px;
+      height: 25px;
+      background: url("../img/mail.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+}

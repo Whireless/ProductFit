@@ -1,8 +1,17 @@
 .application {
-  background-image: url("../img/application.svg");
-  background-repeat: no-repeat;
-  background-position: 30px center;
+  position: relative;
   padding: 70px 25px 0 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 343px;
+    height: 345px;
+    background-image: url("../img/application.svg");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+
+  }
 }
 
 .application__link {
@@ -27,5 +36,21 @@
   &:focus {
     transform: scale(1.05);
     transition: 0.5s;
+  }
+}
+
+@media (min-width: $tabletW) {
+  .application {
+    padding: 150px 45px;
+
+    &::before {
+      top: 40px;
+    }
+  }
+
+  .application__link {
+    width: 270px;
+    height: 60px;
+    margin: 60px 0 0 auto;
   }
 }

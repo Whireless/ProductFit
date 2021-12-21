@@ -7,18 +7,26 @@
 }
 
 .about__info-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/mobile/about.png");
-  background-repeat: no-repeat;
-  background-size: 330px 314px;
-  background-position: 0 200px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/mobile/about@2x.png");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 230px;
+    width: 314px;
+    height: 330px;
+    background-image: url("../img/mobile/about.png");
     background-repeat: no-repeat;
-    background-size: 330px 314px;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/mobile/about@2x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 }
 
@@ -62,7 +70,104 @@
 }
 
 @media (min-width: $tabletW) {
+  .about {
+    padding-top: 70px;
+  }
+
   .about__preferences-list {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 130px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .about__preferences-item {
+    position: relative;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 120px;
+    height: 100%;
+    background-image: $project-bg;
+    border-radius: 25px;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:first-of-type {
+      &::before {
+        background-image: url("../img/preferences/interview.svg");
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::before {
+        background-image: url("../img/preferences/plan.svg");
+      }
+    }
+
+    &:nth-of-type(3) {
+      &::before {
+        background-image: url("../img/preferences/comand.svg");
+      }
+    }
+
+    &:nth-of-type(4) {
+      &::before {
+        background-image: url("../img/preferences/develop.svg");
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        background-image: url("../img/preferences/metrics.svg");
+      }
+    }
+
+    p {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0 0 19px 0;
+    }
+  }
+
+  .about__info-block {
+    align-items: flex-start;
+    width: 295px;
+    margin-top: 60px;
+    margin-left: auto;
+
+    &::before {
+      top: 0;
+      left: -340px;
+    }
+  }
+
+  .about__title {
+    font-size: 22px;
+    line-height: 29px;
+    text-align: left;
+  }
+
+  .about__link-interview {
+    margin-top: 44px;
   }
 }

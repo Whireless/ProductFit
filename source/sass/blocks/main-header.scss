@@ -79,34 +79,38 @@
 }
 
 .main-header__partners-item {
+  width: 260px;
+  height: 54px;
+  background-size: contain;
+  background-position: center;
+
+  &:not(:first-of-type) {
+    display: none;
+  }
+
   &:first-of-type {
-    width: 260px;
-    height: 54px;
-    background: url("../img/partners/wooter.svg") no-repeat;
+    background-image: url("../img/partners/wooter.svg");
+    background-repeat: no-repeat;
   }
 
   &:nth-of-type(2) {
-    width: 173px;
-    height: 53px;
-    background: url("../img/partners/smartbar.svg") no-repeat;
+    background-image: url("../img/partners/smartbar.svg");
+    background-repeat: no-repeat;
   }
 
   &:nth-of-type(3) {
-    width: 160px;
-    height: 54px;
-    background: url("../img/partners/cabify.svg") no-repeat;
+    background-image: url("../img/partners/cabify.svg");
+    background-repeat: no-repeat;
   }
 
   &:nth-of-type(4) {
-    width: 139px;
-    height: 54px;
-    background: url("../img/partners/kari.svg") no-repeat;
+    background-image: url("../img/partners/kari.svg");
+    background-repeat: no-repeat;
   }
 
   &:last-of-type {
-    width: 197px;
-    height: 13px;
-    background: url("../img/partners/uralairlines.svg") no-repeat;
+    background-image: url("../img/partners/uralairlines.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -121,5 +125,53 @@
 
   &--previus {
     transform: rotate(180deg);
+  }
+}
+
+@media (min-width: $tabletW) {
+  .main-header {
+    background: url("../img/tablet/bg-header.svg") no-repeat;
+    background-size: 400px 400px;
+    background-position: 275px 130px;
+  }
+
+  .main-header__intro-block {
+    align-items: flex-start;
+    width: 320px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .main-header__title {
+    font-size: 31px;
+    text-align: left;
+    width: 222px;
+  }
+
+  .main-header__description {
+    margin-bottom: 90px;
+  }
+
+  .main-header__partners {
+    position: static;
+  }
+
+  .main-header__partners-list {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .main-header__partners-item {
+    display: block;
+    width: 120px;
+    height: 45px;
+
+    &:not(.main-header__partners-list) {
+      display: block;
+    }
+  }
+
+  .main-header__button {
+    display: none;
   }
 }

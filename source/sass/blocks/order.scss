@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 90px;
+  padding-top: 100px;
   padding-left: 25px;
   padding-right: 25px;
 
@@ -19,24 +19,12 @@
 }
 
 .order__list {
-  // position: relative;
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: center;
-  // gap: 60px;         // позже удалить свойство
   margin: 0;
   padding: 0;
   list-style: none;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 110px;
-  //   background-color: $green;
-  // }
 }
 
 .order__item {
@@ -50,6 +38,10 @@
   height: 345px;
   background: $project-bg;
   border-radius: 30px;
+
+  &:not(:first-of-type) {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -140,5 +132,42 @@
 
   &--next {
     transform: rotate(0);
+  }
+}
+
+@media (min-width: $tabletW) {
+  .order {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .order__list {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .order__item {
+    width: 200px;
+    height: 300px;
+
+    &:not(.order__list) {
+      display: flex;
+    }
+
+    &::before {
+      width: 135px;
+      height: 135px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    a {
+      width: 180px;
+    }
+  }
+
+  .order__button {
+    display: none;
   }
 }

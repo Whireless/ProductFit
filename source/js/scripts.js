@@ -5,6 +5,7 @@ const slider = document.querySelectorAll('.main-header__partners-item');
 const sliderTwo = document.querySelectorAll('.order__item');
 const prevBtnTwo = document.querySelector('.order__button--previus');
 const nextBtnTwo = document.querySelector('.order__button--next');
+const screenW = window.screen.width;
 
 let slideIndex = 1;
 
@@ -73,3 +74,14 @@ nextBtnTwo.onclick = function () {
 }
 
 showSlidesTwo(slideIndex);
+
+window.addEventListener('resize', function () {
+  if (screenW >= 720) {
+    for (let slide of slider) {
+      slide.removeAttribute('style');
+    }
+    for (let slide of sliderTwo) {
+      slide.removeAttribute('style');
+    }
+  }
+});

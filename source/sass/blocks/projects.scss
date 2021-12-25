@@ -110,3 +110,30 @@
     }
   }
 }
+
+@media (min-width: $desktopW) {
+  .projects {
+    padding-top: 110px;
+  }
+
+  .projects__intro {
+    font-size: 29px;
+  }
+
+  .projects__list {
+    grid-template-columns: repeat(3, min-content);
+    row-gap: 40px;
+    margin-top: 60px;
+  }
+
+  .projects__item {
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      display: flex;
+    }
+  }
+
+  .projects__all-projects {
+    margin: 45px auto 0 auto;
+  }
+}

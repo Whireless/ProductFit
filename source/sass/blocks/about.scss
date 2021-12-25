@@ -171,3 +171,41 @@
     margin-top: 44px;
   }
 }
+
+@media (min-width: $desktopW) {
+  .about {
+    padding-top: 110px;
+  }
+
+  .about__preferences-item {
+    width: 175px;
+    height: 145px;
+
+    &::before {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .about__info-block {
+    margin-top: 140px;
+
+    &::before {
+      width: 500px;
+      height: 380px;
+      background-image: url("../img/desktop/about.png");
+      top: -95px;
+      left: -710px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/desktop/about@2x.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .about__title {
+    font-size: 24px;
+  }
+}

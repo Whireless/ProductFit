@@ -39,7 +39,6 @@ prevBtn.onclick = function () {
 nextBtn.onclick = function () {
   plusSlides(1);
 }
-
 showSlides(slideIndex);
 
 // Слайдер тарифов
@@ -72,8 +71,16 @@ prevBtnTwo.onclick = function () {
 nextBtnTwo.onclick = function () {
   plusSlidesTwo(1);
 }
-
 showSlidesTwo(slideIndex);
+
+if (screenW >= 720) {
+  for (let slide of slider) {
+    slide.removeAttribute('style');
+  }
+  for (let slide of sliderTwo) {
+    slide.removeAttribute('style');
+  }
+}
 
 window.addEventListener('resize', function () {
   if (screenW >= 720) {

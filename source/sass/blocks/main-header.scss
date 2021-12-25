@@ -132,7 +132,7 @@
   .main-header {
     background: url("../img/tablet/bg-header.svg") no-repeat;
     background-size: 400px 400px;
-    background-position: 275px 130px;
+    background-position: 85% 130px;
   }
 
   .main-header__intro-block {
@@ -154,6 +154,7 @@
 
   .main-header__partners {
     position: static;
+    padding: 15px 45px;
   }
 
   .main-header__partners-list {
@@ -163,7 +164,7 @@
 
   .main-header__partners-item {
     display: block;
-    width: 120px;
+    width: 105px;
     height: 45px;
 
     &:not(.main-header__partners-list) {
@@ -173,5 +174,34 @@
 
   .main-header__button {
     display: none;
+  }
+}
+
+@media (min-width: $desktopW) {
+  .main-header {
+    background-size: 600px 580px;
+    background-position: 500px 100px;
+  }
+
+  .main-header__intro-block {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
+  .main-header__title {
+    font-size: 35px;
+    width: 250px;
+  }
+
+  .main-header__description {
+    margin-top: 25px;
+  }
+
+  .main-header__partners {
+    padding: 15px 100px;
+  }
+
+  .main-header__partners-item {
+    width: 180px;
   }
 }

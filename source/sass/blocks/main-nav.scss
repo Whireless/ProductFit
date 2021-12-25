@@ -60,3 +60,43 @@
     }
   }
 }
+
+@media (min-width: $desktopW) {
+  .main-nav {
+    padding-top: 46px;
+  }
+
+  .main-nav__link-block {
+    justify-content: flex-start;
+    width: 368px;
+  }
+
+  .main-nav__link {
+    &--telegram {
+      width: 46px;
+      height: 35px;
+    }
+
+    &--mail {
+      width: 46px;
+      height: 35px;
+      margin-left: 57px;
+      margin-right: 85px;
+    }
+
+    &--phone {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -30px;
+        width: 18px;
+        height: 32px;
+        background-image: url("../img/phone.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
